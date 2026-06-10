@@ -1,0 +1,23 @@
+{
+  "name": "thepvtlst",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:agent": "cd apps/agent-api && .\\.venv\\Scripts\\python.exe -m uvicorn app.main:app --port 8001",
+    "dev:all": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy Bypass -File .\\infra\\dev\\dev.ps1",
+    "dev:restart": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy Bypass -File .\\infra\\dev\\restart.ps1"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
