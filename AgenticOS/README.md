@@ -3,6 +3,8 @@
 The PVTLST is a private AI operating system:
 private intelligence, one all-rounder agent, connected apps, library, canvas, and approval-based actions.
 
+> Connected to Vercel — auto-deploy from `oneneuralent/ThePvtLst`.
+
 ## Architecture
 
 - `apps/web`: Next.js App Router frontend on Vercel.
